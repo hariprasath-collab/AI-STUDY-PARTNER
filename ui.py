@@ -79,7 +79,24 @@ if "session_id" not in st.session_state:
     st.session_state.session_id = None
 
 if "username" not in st.session_state:
-    st.session_state.username = "gokul"
+    st.session_state.username = ""
+
+if st.session_state.username == "":
+    st.title("🎓 AI Study Partner")
+
+    username = st.text_input(
+        "Enter your name",
+        placeholder="e.g. Hari prasath"
+    )
+
+    if st.button("Continue"):
+        if username.strip():
+            st.session_state.username = username.strip()
+            st.rerun()
+        else:
+            st.warning("Please enter your name.")
+
+    st.stop()
 
 # -----------------------------
 # Header
