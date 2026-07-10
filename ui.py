@@ -4,7 +4,7 @@ import requests
 # -----------------------------
 # API
 # -----------------------------
-BASE_URL = "https://ai-study-partner-api.onrender.com"
+BASE_URL = "http://127.0.0.1:8000"
 CHAT_URL = f"{BASE_URL}/chat"
 
 # -----------------------------
